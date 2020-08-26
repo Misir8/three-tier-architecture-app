@@ -1,0 +1,12 @@
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.deps.json
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.dll
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.pdb
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.csprojAssemblyReference.cache
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.AssemblyInfoInputs.cache
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.AssemblyInfo.cs
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.csproj.CoreCompileInputs.cache
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.dll
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.pdb
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.dll
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.pdb
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.BLL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.BLL.csproj.CopyComplete

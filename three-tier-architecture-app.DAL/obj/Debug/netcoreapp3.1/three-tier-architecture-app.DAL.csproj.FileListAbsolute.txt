@@ -1,0 +1,12 @@
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.deps.json
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.dll
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.pdb
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.csprojAssemblyReference.cache
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.AssemblyInfoInputs.cache
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.AssemblyInfo.cs
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.csproj.CoreCompileInputs.cache
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.dll
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.pdb
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.runtimeconfig.json
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\bin\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.runtimeconfig.dev.json
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app.DAL\obj\Debug\netcoreapp3.1\three-tier-architecture-app.DAL.genruntimeconfig.cache

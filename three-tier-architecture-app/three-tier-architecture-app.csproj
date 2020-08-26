@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <RootNamespace>three_tier_architecture_app</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\three-tier-architecture-app.BLL\three-tier-architecture-app.BLL.csproj" />
+      <ProjectReference Include="..\three-tier-architecture-app.DAL\three-tier-architecture-app.DAL.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7" />
+    </ItemGroup>
+
+
+</Project>
