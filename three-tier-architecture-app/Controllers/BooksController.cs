@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -43,6 +44,26 @@ namespace three_tier_architecture_app.Controllers
             var mappingBook = _mapper.Map<Book, BookToReturnDto>(book);
             
             return Ok(mappingBook);
+        }
+
+        [HttpDelete("{id}/{genreId}")]
+        public async Task<IActionResult> DeleteGenreFromBook(int id, int genreId)
+        {
+            var bookGenre = _context.BookGenres.FirstOrDefault(x => x.BookId == id && x.GenreId == genreId);
+            if (bookGenre == null) return NotFound();
+            _context.BookGenres.Remove(bookGenre);
+            await _context.SaveChangesAsync();
+            return Ok(bookGenre.Id);
+        }
+        
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var book = _context.Books.FirstOrDefault(x => x.Id == id);
+            if (book == null) return NotFound();
+            _context.Books.Remove(book);
+            await _context.SaveChangesAsync();
+            return Ok(book.Id);
         }
     }
 }

@@ -19,9 +19,10 @@ namespace three_tier_architecture_app.BLL.Helpers
                 .ForMember(x => x.BirthDate,
                     o =>
                         o.MapFrom(x => x.Author.BirthDate))
-                .ForMember(x => x.GenreName,
+                .ForMember(x => x.Genres,
                     o =>
-                        o.MapFrom(x => x.BookGenres.Select(g => g.Genre.Name).ToList()));
+                        o.MapFrom(x => x.BookGenres
+                            .Select(g => new GenreNameAndIdDto{Name = g.Genre.Name, GenreId = g.Genre.Id}).ToList()));
         }
     }
 }
