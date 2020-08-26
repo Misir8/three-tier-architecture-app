@@ -22,9 +22,6 @@
         "projectReferences": {
           "C:\\Users\\PREDATOR\\RiderProjects\\three-tier-architecture-app\\three-tier-architecture-app.BLL\\three-tier-architecture-app.BLL.csproj": {
             "projectPath": "C:\\Users\\PREDATOR\\RiderProjects\\three-tier-architecture-app\\three-tier-architecture-app.BLL\\three-tier-architecture-app.BLL.csproj"
-          },
-          "C:\\Users\\PREDATOR\\RiderProjects\\three-tier-architecture-app\\three-tier-architecture-app.DAL\\three-tier-architecture-app.DAL.csproj": {
-            "projectPath": "C:\\Users\\PREDATOR\\RiderProjects\\three-tier-architecture-app\\three-tier-architecture-app.DAL\\three-tier-architecture-app.DAL.csproj"
           }
         }
       }

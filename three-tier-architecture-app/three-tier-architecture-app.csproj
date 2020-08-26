@@ -7,7 +7,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\three-tier-architecture-app.BLL\three-tier-architecture-app.BLL.csproj" />
-      <ProjectReference Include="..\three-tier-architecture-app.DAL\three-tier-architecture-app.DAL.csproj" />
     </ItemGroup>
 
     <ItemGroup>
