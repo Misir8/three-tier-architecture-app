@@ -24,7 +24,8 @@ namespace three_tier_architecture_app
         {
             services.AddDbContext<DataContext>(opt =>
             {
-                opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                //opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                opt.UseInMemoryDatabase(nameof(DataContext));
             });
             services.AddAutoMapper(typeof(AutoMapperProfiles));
             services.AddControllers();

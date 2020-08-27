@@ -65,3 +65,4 @@ C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architect
 C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app\obj\Debug\netcoreapp3.1\three-tier-architecture-app.genruntimeconfig.cache
 C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\PREDATOR\RiderProjects\three-tier-architecture-app\three-tier-architecture-app\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll

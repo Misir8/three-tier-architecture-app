@@ -91,36 +91,13 @@ namespace three_tier_architecture_app.Controllers
         [HttpPut]
         public async Task<IActionResult> Edit(BookEditDto bookEditDto)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
-            var book = await _context.Books.Include(x => x.BookGenres)
-                .FirstOrDefaultAsync(x => x.Id == bookEditDto.Id);
-            if (book == null) return NotFound();
+            //To replace a collection of related data correctly, it must be included in the query
+            var book = await _context.Books.Include(b => b.BookGenres)
+                .SingleOrDefaultAsync(b => b.Id == bookEditDto.Id);
+            //Here you just need to replace the entities with new ones and you're done.
+            book.BookGenres = bookEditDto.GenreIds.Select(id => new BookGenre { GenreId = id }).ToList();
 
-            book.Name = bookEditDto.Name;
-            book.AuthorId = bookEditDto.AuthorId;
-
-            var bookGenreIds = book.BookGenres.Select(x => x.GenreId);
-            IEnumerable<int> genreIds = _context.Genres.Select(x => x.Id);
-            var addedGenre = bookEditDto.GenreIds.Except(bookGenreIds);
-            var removedGenre = bookGenreIds.Except(bookEditDto.GenreIds);
-            foreach (var added in addedGenre)
-            {
-                var bookGenre = new BookGenre
-                {
-                    BookId = book.Id,
-                    GenreId = added
-                };
-                await _context.BookGenres.AddAsync(bookGenre);
-            }
-
-            foreach (var remove in removedGenre)
-            {
-                var bookGenreRemove = await _context.BookGenres
-                    .FirstOrDefaultAsync(x => x.BookId == book.Id && x.GenreId == remove);
-
-                _context.BookGenres.Remove(bookGenreRemove);
-            }
-
+            _mapper.Map(bookEditDto, book);
             await _context.SaveChangesAsync();
 
             return Ok(book.Id);

@@ -6,8 +6,15 @@ namespace three_tier_architecture_app.DAL.Data
 {
     public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options):base(options)
-        {}
+        public DataContext()
+        {
+            Database.EnsureCreated();
+        }
+
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
+            
+        }
 
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
@@ -41,6 +48,12 @@ namespace three_tier_architecture_app.DAL.Data
                 new BookGenre{Id = 4, BookId = 2, GenreId = 1},
                 new BookGenre{Id = 5, BookId = 2, GenreId = 3}
             );
+        }
+        
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.UseInMemoryDatabase(nameof(DataContext));
         }
     }
 }

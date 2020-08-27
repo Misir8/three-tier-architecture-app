@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mZGYpDiIV+SMCbaOJwUebC45Viq7/9Sz60mqIMDFvl6bArT+X1xnvC+tZaNRWPjCKnx69sV8tyfiWzvzN2TIDg==",
+  "dgSpecHash": "/W6jwQQAAcDrWEgFZ0g5UIuK78rdGofAw5GdHevlwD3qf5oLcmuGOUotJl3rFlffI+OELZFtrmd5cYTx7OdP3Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\PREDATOR\\RiderProjects\\three-tier-architecture-app\\three-tier-architecture-app.DAL\\three-tier-architecture-app.DAL.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\PREDATOR\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.7\\microsoft.entityframeworkcore.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\PREDATOR\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.7\\microsoft.entityframeworkcore.analyzers.3.1.7.nupkg.sha512",
     "C:\\Users\\PREDATOR\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.7\\microsoft.entityframeworkcore.design.3.1.7.nupkg.sha512",
+    "C:\\Users\\PREDATOR\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\3.1.7\\microsoft.entityframeworkcore.inmemory.3.1.7.nupkg.sha512",
     "C:\\Users\\PREDATOR\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.7\\microsoft.entityframeworkcore.relational.3.1.7.nupkg.sha512",
     "C:\\Users\\PREDATOR\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.7\\microsoft.entityframeworkcore.sqlserver.3.1.7.nupkg.sha512",
     "C:\\Users\\PREDATOR\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.7\\microsoft.extensions.caching.abstractions.3.1.7.nupkg.sha512",

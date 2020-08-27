@@ -25,6 +25,7 @@ namespace three_tier_architecture_app.BLL.Helpers
                             .Select(bg => new GenreNameAndIdDto{Name = bg.Genre.Name, GenreId = bg.Genre.Id}).ToList()));
 
             CreateMap<BookCreateDto, Book>();
+            CreateMap<BookEditDto, Book>();
         }
     }
 }
