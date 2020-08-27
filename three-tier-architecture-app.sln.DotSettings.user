@@ -10,4 +10,9 @@
 	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=9b9b2440_002Dbc29_002D4832_002Daac0_002Dd908813a5e9d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetBooksAsync_ReturnOk" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=ad0a03a0_002D5aa5_002D47fd_002Db645_002Db9570bd42ec1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetGenresAsync_ReturnOk" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::749BEDA5-411C-412B-B287-B0961DD55DC0::.NETCoreApp,Version=v3.1::three_tier_architecture_app.Tests.GenresControllerTests.GetGenresAsync_ReturnOk&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
