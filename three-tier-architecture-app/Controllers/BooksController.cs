@@ -65,5 +65,27 @@ namespace three_tier_architecture_app.Controllers
             await _context.SaveChangesAsync();
             return Ok(book.Id);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(BookCreateDto bookCreateDto)
+        
+        {
+            if (!ModelState.IsValid) return BadRequest();
+            
+            var book = _mapper.Map<BookCreateDto, Book>(bookCreateDto);
+            
+            await _context.Books.AddAsync(book);
+            await _context.SaveChangesAsync();
+            
+            foreach (var genreId in bookCreateDto.GenreIds)
+            {
+                var bookGenre = new BookGenre {BookId = book.Id, GenreId = genreId};
+                await _context.BookGenres.AddAsync(bookGenre);
+            }
+
+            await _context.SaveChangesAsync();
+            
+            return Ok(book.Id);
+        }
     }
 }
