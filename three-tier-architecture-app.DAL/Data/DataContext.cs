@@ -1,19 +1,22 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using three_tier_architecture_app.DAL.Entities;
 
 namespace three_tier_architecture_app.DAL.Data
 {
     public class DataContext : DbContext
     {
+        private readonly IConfiguration _config;
+
         public DataContext()
         {
             Database.EnsureCreated();
         }
 
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        public DataContext(DbContextOptions<DataContext> options, IConfiguration config) : base(options)
         {
-            
+            _config = config;
         }
 
         public DbSet<Book> Books { get; set; }
@@ -54,6 +57,7 @@ namespace three_tier_architecture_app.DAL.Data
         {
             base.OnConfiguring(optionsBuilder);
             optionsBuilder.UseInMemoryDatabase(nameof(DataContext));
+            //optionsBuilder.UseSqlServer(_config.GetConnectionString("DefaultConnection"));
         }
     }
 }

@@ -26,6 +26,15 @@ namespace three_tier_architecture_app.BLL.Helpers
 
             CreateMap<BookCreateDto, Book>();
             CreateMap<BookEditDto, Book>();
+            
+            CreateMap<Genre, GenreToReturnDto>()
+                .ForMember(x => x.Books,
+                    o =>
+                        o.MapFrom(x => x.BookGenres
+                            .Select(bg => bg.Book.Name).ToList()));
+            
+            CreateMap<GenreCreateDto, Genre>();
+            CreateMap<GenreEditDto, Genre>();
         }
     }
 }

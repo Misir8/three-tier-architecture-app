@@ -68,7 +68,6 @@ namespace three_tier_architecture_app.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Create(BookCreateDto bookCreateDto)
-        
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
             
@@ -85,7 +84,7 @@ namespace three_tier_architecture_app.Controllers
 
             await _context.SaveChangesAsync();
             
-            return Ok(book);
+            return Ok(book.Id);
         }
 
         [HttpPut]
@@ -94,13 +93,14 @@ namespace three_tier_architecture_app.Controllers
             //To replace a collection of related data correctly, it must be included in the query
             var book = await _context.Books.Include(b => b.BookGenres)
                 .SingleOrDefaultAsync(b => b.Id == bookEditDto.Id);
+            if (book == null) return NotFound();
             //Here you just need to replace the entities with new ones and you're done.
             book.BookGenres = bookEditDto.GenreIds.Select(id => new BookGenre { GenreId = id }).ToList();
 
             _mapper.Map(bookEditDto, book);
             await _context.SaveChangesAsync();
 
-            return Ok(book);
+            return Ok(book.Id);
         }
     }
 }

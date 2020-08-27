@@ -73,12 +73,10 @@ namespace three_tier_architecture_app.Tests
                 GenreIds = new List<int>{_genre.Id}
             };
             var result = await _controller.Create(bookCreateDto) as OkObjectResult;
-            var value = result?.Value as Book;
+            var value = result?.Value as Nullable<int>;
 
             Assert.IsType<OkObjectResult>(result);
-            Assert.True(value?.Name == bookCreateDto.Name);
-            Assert.True(value?.AuthorId == bookCreateDto.AuthorId);
-
+            Assert.IsType<int>(value);
         }
 
 
@@ -115,12 +113,10 @@ namespace three_tier_architecture_app.Tests
                 GenreIds = new List<int>{1, _genre.Id}
             };
             var result = await _controller.Edit(editBook) as OkObjectResult;
-            var value = result?.Value as Book;
+            var value = result?.Value as Nullable<int>;
 
             Assert.IsType<OkObjectResult>(result);
-            Assert.True(editBook.Id == value?.Id);
-            Assert.True(editBook.Name == value?.Name);
-            Assert.True(editBook.GenreIds.Count() == value.BookGenres.Count);
+            Assert.True(editBook.Id == value);
         }
         
         
