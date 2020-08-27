@@ -85,7 +85,7 @@ namespace three_tier_architecture_app.Controllers
 
             await _context.SaveChangesAsync();
             
-            return Ok(book.Id);
+            return Ok(book);
         }
 
         [HttpPut]
@@ -100,7 +100,7 @@ namespace three_tier_architecture_app.Controllers
             _mapper.Map(bookEditDto, book);
             await _context.SaveChangesAsync();
 
-            return Ok(book.Id);
+            return Ok(book);
         }
     }
 }
