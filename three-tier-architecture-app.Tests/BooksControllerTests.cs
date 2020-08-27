@@ -4,8 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using three_tier_architecture_app.BLL.Dto;
+using three_tier_architecture_app.BLL.Helpers;
 using three_tier_architecture_app.Controllers;
 using three_tier_architecture_app.DAL.Data;
 using three_tier_architecture_app.DAL.Entities;
@@ -25,7 +25,7 @@ namespace three_tier_architecture_app.Tests
         public BooksControllerTests()
         {
             _context = new DataContext();
-            _mapper = SetUpMapperReverse();
+            _mapper = SetUpMapper();
             _controller = new BooksController(_context, _mapper);
             _author = new Author{ Firstname = "sada", Lastname = "asdas", BirthDate = DateTime.Now};
             _genre = new Genre {Name = "Default Genre"};
@@ -50,7 +50,7 @@ namespace three_tier_architecture_app.Tests
         [Fact]
         public async Task GetBookByIdAsync_Id_ReturnOk()
         {
-            var result = await _controller.GetBookByIdAsync(1) as OkObjectResult;
+            var result = await _controller.GetBookByIdAsync(_book.Id) as OkObjectResult;
             var value = result?.Value as BookToReturnDto;
             Assert.IsType<OkObjectResult>(result);
             Assert.True(value != null);
@@ -66,8 +66,6 @@ namespace three_tier_architecture_app.Tests
         [Fact]
         public async Task Create_bookCreateDto_ReturnOk()
         {
-            _mapper = SetUpMapper();
-            _controller = new BooksController(_context, _mapper);
             var bookCreateDto = new BookCreateDto
             {
                 AuthorId = _author.Id,
@@ -100,14 +98,15 @@ namespace three_tier_architecture_app.Tests
             var value = result?.Value as Nullable<int>;
             Assert.IsType<OkObjectResult>(result);
             Assert.True(value == _book.Id);
+
+            _book = null;
         }
 
 
         [Fact]
         public async Task Edit_bookEditDto_ReturnOk()
         {
-            _mapper = SetUpMapperEdit();
-            _controller = new BooksController(_context, _mapper);
+           
             var editBook = new BookEditDto
             {
                 Id = _book.Id,
@@ -132,27 +131,18 @@ namespace three_tier_architecture_app.Tests
             if (_book != null) _context.Books.Remove(_book);
             
             if (_author != null) _context.Authors.Remove(_author);
+
+            _context.SaveChanges();
         }
         
-        private IMapper SetUpMapperReverse()
-        {
-            var mapperConfiguration = new MapperConfiguration(cfg => 
-                cfg.CreateMap<Book, BookToReturnDto>().ReverseMap());
-            return new Mapper(mapperConfiguration);
-        }
+        
         
         private IMapper SetUpMapper()
         {
-            var mapperConfiguration = new MapperConfiguration(cfg => 
-                cfg.CreateMap<Book, BookCreateDto>().ReverseMap());
-            return new Mapper(mapperConfiguration);
+            var config = new MapperConfiguration(cfg => cfg.AddProfile<AutoMapperProfiles>());
+            var mapper = new Mapper(config);
+            return mapper;
         }
         
-        private IMapper SetUpMapperEdit()
-        {
-            var mapperConfiguration = new MapperConfiguration(cfg => 
-                cfg.CreateMap<Book, BookEditDto>().ReverseMap());
-            return new Mapper(mapperConfiguration);
-        }
     }
 }
