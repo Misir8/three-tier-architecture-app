@@ -22,7 +22,7 @@ namespace three_tier_architecture_app.BLL.Helpers
                 .ForMember(x => x.Genres,
                     o =>
                         o.MapFrom(x => x.BookGenres
-                            .Select(g => new GenreNameAndIdDto{Name = g.Genre.Name, GenreId = g.Genre.Id}).ToList()));
+                            .Select(bg => new GenreNameAndIdDto{Name = bg.Genre.Name, GenreId = bg.Genre.Id}).ToList()));
 
             CreateMap<BookCreateDto, Book>();
         }
